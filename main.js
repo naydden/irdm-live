@@ -1,14 +1,14 @@
 var viewer = new Cesium.Viewer('cesiumContainer');
 
-// var connection = new WebSocket('ws://localhost:3030');
-
-// connection.onmessage = function (evt) { 
-//   var received_msg = evt.data;
-//   var coordinates = JSON.parse(received_msg);
-//   console.log(coordinates[0]);
-//   console.log(coordinates[1]);
-//   console.log(coordinates[2]);
-// };
+var source = new EventSource('stream.php');
+source.onmessage = function(e) { 
+  /*var received_msg = evt.data;
+  var coordinates = JSON.parse(received_msg);
+  console.log(coordinates[0]);
+  console.log(coordinates[1]);
+  console.log(coordinates[2]);*/
+  console.log(e);
+};
 
 var heading = Cesium.Math.toRadians(45.0);
 var pitch = Cesium.Math.toRadians(15.0);
