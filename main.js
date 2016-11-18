@@ -1,5 +1,5 @@
 var viewer = new Cesium.Viewer('cesiumContainer');
-var connection = new WebSocket('ws://localhost:3030');
+var connection = new WebSocket('ws://localhost:8080');
 
 connection.onmessage = function (evt) { 
   var received_msg = evt.data;
