@@ -51,6 +51,7 @@
 
 	session_start();
 	$_SESSION['data'] = time();
+	print_r($_SESSION);
 
 	# Write file
 		fwrite( $file,

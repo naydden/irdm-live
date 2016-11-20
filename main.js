@@ -1,7 +1,7 @@
 var viewer = new Cesium.Viewer('cesiumContainer');
 
 if (typeof(EventSource) !== 'undefined') {
-	var source = new EventSource('stream.php');
+	var source = new EventSource('merged_test.php');
 	source.onmessage = function(e) { 
 		var coordinates = JSON.parse(e.data);
 		console.log(coordinates);
