@@ -67,11 +67,11 @@ for($i = $maxLine; $i >= $minLine; $i--) {
 
  # Post it to page:
 
-    $url = 'http://localhost/IRIDIUM/4_POST/savePOST.php';
+    $url = 'http://localhost/git/irdm-live/savePOST.php';
 
     post_to_url( $url , $data2post );
 
-    #sleep(1);
+    sleep(10);
 }
 
 function post_to_url($url, $data) {

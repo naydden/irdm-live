@@ -49,6 +49,9 @@
 		$T_BMP 	= $_REQUEST['T_BMP'];
 		$h_BMP 	= $_REQUEST['h_BMP'];
 
+	session_start();
+	$_SESSION['data'] = time();
+
 	# Write file
 		fwrite( $file,
 			$httpUTC.",".
